@@ -15,7 +15,7 @@ def reports_to(node,accu):
     query = "SELECT * from nodes where reports_to=:nid"
     row = app.engine.execute(text(query),nid=node['id'])
     # accu[node['name']] = []
-    accu[node['name']] = {'job_title':node['job_title'],'name':node['name'],'id':node['id'],'children':[]}
+    accu[node['name']] = {'job_title':node['job_title'],'id':node['id'],'children':[]}
     
     if not row:
         pass
@@ -193,7 +193,7 @@ class NonValidatingSelectField(SelectField):
 # Add user form
 class AddUserForm(Form):
     name = TextField("name", [DataRequired("Name required.")])
-    job_title = TextField("job_title", [DataRequired("Job title required.")])
+    job_title = TextField("job_title")
     reports_to = NonValidatingSelectField("node",choices=[],coerce=int)    
 
 # Edit user form
