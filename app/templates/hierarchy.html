@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+    <title>Company Hierarchy</title>
+    
+    <style>
+    </style>
+</head>
+<body>
+  <!-- Static navbar -->
+  <div class="header"></div>  
+  <div class="container">
+    <h2>Company Hierarchy</h2>
+    <div>
+      <a href="{{ url_for('add') }}">Add new</a><br>
+      
+      <select onchange="window.location=this.options[this.selectedIndex].value;">
+         <option value="">Edit a node...</option>
+        {% for node in choices %}
+           <option value="/edit/{{node[0]}}">{{node[1]}}, {{node[2]}}</option>
+        {% endfor %}
+      </select>  
+    </br></br>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for message, level in messages %}
+    		<div class="notification-{{level}}">{{message}}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div id="company">
+      <code style="white-space:pre;" id="structure" class="prettyprint">
+      </code>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script>
+    var hierarchy = {{hierarchy|tojson}}
+    $('#structure').text(JSON.stringify(hierarchy,null,4))
+
+    $(document).ready(function() {
+      $(".notification-info, .notification-error").hide(0);
+      $(".notification-info, .notification-error").fadeIn(500).delay(9000).slideUp(500);
+    });
+  </script>
+      
+</body>
+</html>

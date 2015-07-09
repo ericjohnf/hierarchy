@@ -1,0 +1,67 @@
+LOG:  database system was shut down at 2015-07-07 18:23:55 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "ericjohnf" does not exist
+FATAL:  database "ericjohnf" does not exist
+FATAL:  database "ericjohnf" does not exist
+FATAL:  database "ericjohnf" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-07-07 18:49:03 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-07-07 18:54:37 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "ericjohnf" does not exist
+ERROR:  database "namely" already exists
+STATEMENT:  CREATE DATABASE namely;
+	
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-07-07 19:05:34 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "local_user" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-07-07 19:31:05 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+WARNING:  pgstat wait timeout
+FATAL:  database "namey" does not exist
+FATAL:  database "/usr/local/pgsql/data" does not exist
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2015-07-09 11:49:15 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "ericjohnf" does not exist
+ERROR:  role "local_user" does not exist
+STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE namely TO local_user;
+FATAL:  database "/usr/local/pgsql/data" does not exist
+ERROR:  syntax error at or near "]" at character 1
+STATEMENT:  ]dt
+	;
+ERROR:  syntax error at or near "1" at character 41
+STATEMENT:  select * from nodes where reports_to is 1;
+ERROR:  syntax error at or near "1" at character 41
+STATEMENT:  select * from nodes where reports_to is 1;
+ERROR:  syntax error at or near "is1" at character 38
+STATEMENT:  select * from nodes where reports_to is1;
+ERROR:  syntax error at or near "1" at character 41
+STATEMENT:  select * from nodes where reports_to is 1;
+ERROR:  syntax error at or near "1" at character 41
+STATEMENT:  select * from nodes where reports_to is 1;
