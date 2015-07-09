@@ -5,12 +5,10 @@ Setup instructions:
 pip install -r requirements.txt
 ```
 
-#### Install PostgreSQL For Debian-based linuxes
+#### Install PostgreSQL
 ```sh
-sudo apt-get install libpq-dev python-dev postgresql
-```
-#### For OS-X
 brew install postgres
+```
 
 #### To run database locally
 ```sh
